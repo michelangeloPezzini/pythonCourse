@@ -1,10 +1,14 @@
 # Exercicio 28
-""" import random
+""" from functools import partial
+import random
+from time import sleep
 numberRandon = random.randint(1, 10)
-print("********************")
+print("*" * 20)
 print("Tente ganhar este jogo!")
+print("*" * 20)
 userChoose = int(input("Escolha um numero entre 1 e 10! "))
-print("********************")
+print("Verificando...")
+sleep(3)
 if userChoose == numberRandon:
     print("Você ganhou!!!!")
     print("{} x {}".format(userChoose, numberRandon))
@@ -22,8 +26,7 @@ if velocidade > limite:
 else:
   print("Você está na velocidade permitida") """
 
-from functools import partial
- # Ecercicio 30
+# Ecercicio 30
 
 """ number = int(input("Digite um numero: "))
 if number % 2 == 0:
@@ -42,6 +45,15 @@ else:
     print("O valor da passagem será R${}".format(passagem)) """
 
 # Exercicio 32
-anoBissexto = int(input("Digite o ano desejado: "))
-var = anoBissexto % 4 
-print(var)
+""" from datetime import date
+ano = int(input("Digite o ano desejado | Digite 0 para o ano atual! "))
+if ano == 0:
+    year = date.today().year
+    month = date.today().month
+    day = date.today().day
+    print("Hoje é dia {} do mês {} de {}".format(day, month, year))
+if ano % 4 == 0 and ano % 100 == 0 and ano % 400 == 0:
+    print("O ano {} é bissexto".format(ano))
+else: 
+    print("O ano {} não é bissexto".format(ano)) """
+
