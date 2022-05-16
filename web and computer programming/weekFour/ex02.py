@@ -1,4 +1,6 @@
 # Exercise number 3°
+# I added a tip to plus with the total costs
+
 childMeal = float(input("Whats is the price of a child`s meal? R$"))
 adultMeal = float(input("Whats is the price of an adult`s meal? R$"))
 children = int(input("How many children are there? "))

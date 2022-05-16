@@ -58,7 +58,7 @@ print(soma)
  """
 
 # Exercicio 52
-""" total = 0
+total = 0
 num = int(input("Digite um numero qualquer: "))
 for i in range(1, num + 1):
     if num % i == 0:
@@ -71,4 +71,4 @@ print("\n\033[mO numero {} é divisivel {} vezes".format(num, total))
 if total == 2:
     print("O numero é primo")
 else:
-    print("O numero nao é primo") """
+    print("O numero nao é primo") 
