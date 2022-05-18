@@ -27,7 +27,7 @@ print(separa[1]) """
 
 
 # Exercicio 23
-""" numero = "1954"
+numero = "1954"
 unidade = numero[0]
 print("unidade ", unidade)
 dezena = numero[1]
@@ -36,7 +36,7 @@ centena = numero[2]
 print("centena ", centena)
 milhar = numero[3]
 print("milhar ", milhar)
-"""
+
 
 # Exercicio 24
 """ nome = str(input("Digite seu nome? ")).strip()
@@ -56,7 +56,7 @@ print("A primeira letra 'A' apareceu na posição {}".format(nome.find('A')+1))
 print("A ultima letra 'A' apareceu na posição {}".format(nome.rfind('A')+1)) """
 
 # Exercicio 27
-nomeCompleto = str(input("Digite seu nome? ")).strip()
+""" nomeCompleto = str(input("Digite seu nome? ")).strip()
 nomeSeparado = nomeCompleto.split()
 print("Primeiro nome {}".format(nomeSeparado[0]))
-print("Ultimo nome {}".format(nomeSeparado[len(nomeSeparado)-1]))
+print("Ultimo nome {}".format(nomeSeparado[len(nomeSeparado)-1])) """
