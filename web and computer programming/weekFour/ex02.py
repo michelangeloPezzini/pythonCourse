@@ -33,7 +33,6 @@ while choose:
         print("Credit Payment \n")
         print("Subtotal: R${:.2f}".format(subtotal))
         print("Sales Tax: R${:.2f}".format(taxRate))
-        print("Tip R${:.2f}".format(value))
         print("Total: R${:.2f}".format(total))
         break
 
@@ -41,14 +40,12 @@ while choose:
         print("Debit Payment \n")
         print("Subtotal: R${:.2f}".format(subtotal))
         print("Sales Tax: R${:.2f}".format(taxRate))
-        print("Tip R${:.2f}".format(value))
         print("Total: R${:.2f}".format(total))
         break
     elif choose == "3":
         print("Pix Payment \n")
         print("Subtotal: R${:.2f}".format(subtotal))
         print("Sales Tax: R${:.2f}".format(taxRate))
-        print("Tip R${:.2f}".format(value))
         print("Total: R${:.2f}".format(total))
         break
     elif choose == "4":
@@ -58,7 +55,6 @@ while choose:
             change = float(payment - total)
             print("Subtotal: R${:.2f}".format(subtotal))
             print("Sales Tax: R${:.2f}".format(taxRate))
-            print("Tip R${:.2f}".format(value))
             print("Total: R${:.2f}".format(total))
             print("Payment: R${}".format(payment))
             print("Chance: R${:.2f}".format(change))
