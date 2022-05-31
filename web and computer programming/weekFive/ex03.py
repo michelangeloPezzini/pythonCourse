@@ -60,9 +60,9 @@ if choose == "1":
         """)
         varTree = int(input("Choose between option '1' or '2':\n\n"))
         if varTree == 1:
-            print("They believe you are making excuses for not making the commitment of the political marriage and they lock you in your room to think about the misbehavior.\n")
-        elif varTree == 2:
             print("When they leave, they lock the door, your only way out is the window, but the question is how are you going to get out of a castle that is almost 50 meters high.\n")
+        elif varTree == 2:
+            print("They believe you are making excuses for not making the commitment of the political marriage and they lock you in your room to think about the misbehavior.\n")
 
     else:
         print("Type again!")

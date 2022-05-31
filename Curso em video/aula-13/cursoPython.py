@@ -58,39 +58,6 @@ while not certo:
 print("Você venceu! {} x {}".format(randomValue, userAnswer))
 print("Você tentou {} vezes! ".format(contador))  """
 
-"""numero = True
-while numero == True:
-    numero1 = int(input("Digite o 1° numero: "))
-    numero2 = int(input("Digite o 2° numero: "))
-
-    print("
-    O que você deseja?
-    [1] Somar
-    [2] Subtrair
-    [3] Multiplicar
-    [4] Dividir
-    ")
-
-   numero = int(input("Digite a opção desejada: "))
-
-    if numero == 1:
-        soma = numero1 + numero2
-        print("A soma é {}".format(soma))
-
-    elif numero == 2:
-        subtracao = numero1 - numero2
-        print("A subtração é {}".format(subtracao))
-
-    elif numero == 3:
-        multiplicar = numero1 * numero2
-        print("A multiplicaçlão é {}".format(multiplicar))
-    elif numero == 4:
-        divisao = numero1 / numero2
-        print("A divisão é {}".format(divisao))
-    else:
-        numero = False
-        print("Digite novamente: ")
- """
 
 """ from math import factorial
 num = int(input("Digite um numero apra calcular seu factorial: "))
@@ -109,3 +76,52 @@ while c > 0:
     c = c - 1    
 print(f)
 print("Fim") """
+
+
+""" sequencia = int(input("Digite o valor da sequencia fibonati: "))
+t1 = 0
+t2 = 1
+print("{} → {}".format(t1,t2),end="")
+
+cont = 3
+while cont <= sequencia:
+    t3 = t1 + t2
+    print(" → {}".format(t3),end="")
+    t1 = t2
+    t2 = t3
+    cont = cont + 1
+print("\nFim") """
+
+numero = True
+while numero == True:
+    numero1 = int(input("Digite o 1° numero: "))
+    numero2 = int(input("Digite o 2° numero: "))
+
+    print("""
+    O que você deseja?
+    [1] Somar
+    [2] Subtrair
+    [3] Multiplicar
+    [4] Dividir
+    """)
+
+    numero = int(input("Digite a opção desejada: "))
+
+    if numero == 1:
+        soma = numero1 + numero2
+        print("A soma é {}".format(soma))
+
+    elif numero == 2:
+        subtracao = numero1 - numero2
+        print("A subtração é {}".format(subtracao))
+
+    elif numero == 3:
+        multiplicar = numero1 * numero2
+        print("A multiplicaçlão é {}".format(multiplicar))
+    elif numero == 4:
+        divisao = numero1 / numero2
+        print("A divisão é {}".format(divisao))
+    else:
+        numero = False
+        print("Digite novamente: ")
+ 
