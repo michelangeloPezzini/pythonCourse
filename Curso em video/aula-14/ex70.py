@@ -1,48 +1,32 @@
 import random
-# Implementar melhor o jogo do par ou impar
-vitoriaPlayer = 0
-vitoriaComputer = 0
-while True:
-    jogador = int(input("Digite um numero: "))
-    computador = random.randint(0, 11)
-    total = jogador + computador
-    tipo = " "
-    while tipo not in "PI":
-        tipo = str(input("Par ou Impar? [P/I] ")).strip().upper()[0]
-    if tipo == "P":
-        if total % 2 == 0:
-            print("-"*30)
-            print("\033[32mVocê ganhou!\033[m")
-            print(f"{jogador} + {computador} = {total}: PAR")
-            print("-"*30)
-            vitoriaPlayer = vitoriaPlayer + 1
-        else:
-            print("-"*30)
-            print("\033[31mVocê perdeu!\033[m")
-            print(f"{jogador} + {computador} = {total}: Impar")
-            print("-"*30)
-            vitoriaComputer = vitoriaComputer + 1
-        print(f"Player {vitoriaPlayer} x {vitoriaComputer} Computer")
-        print("-"*30)
-    elif tipo == "I":
-        if total % 2 == 1:
-            print("-"*30)
-            print("\033[32mVocê ganhou!\033[m")
-            print(f"{jogador} + {computador} = {total}: Impar")
-            print("-"*30)
-            vitoriaPlayer = vitoriaPlayer + 1
-        else:
-            print("-"*30)
-            print("\033[31mVocê perdeu!\033[m")
-            print(f"{jogador} + {computador} = {total}: PAR")
-            print("-"*30)
-            vitoriaComputer = vitoriaComputer + 1
-        print(f"Player {vitoriaPlayer} x {vitoriaComputer} Computer")
-        print("-"*30)
-    if vitoriaPlayer == 5:
-        print(f"\nVocê ganhou por {vitoriaPlayer} x {vitoriaComputer}")
-        break
-    elif vitoriaComputer == 5:
-        print(f"\nVocê perdeu por {vitoriaComputer} x {vitoriaPlayer}")
-        break
-print("\nFim do jogo! ")
+import sys
+
+def guessNumber():
+    number=random.randint(1,1000)
+    count=1
+    guess= int(input("Enter your guess between 1 and 1000: "))
+
+    while guess !=number:
+        count+=1
+        if guess > (number + 10):
+            print("Too high!")
+        elif guess < (number - 10):
+            print("Too low!")
+        elif guess > number:
+            print("Getting warm but still high!")
+        elif guess < number:
+            print("Getting warm but still Low!")
+
+        guess = int(input("Try again "))
+
+    if guess == number:
+        print("You rock! You guessed the number in ", count, " tries!")
+        return
+
+guessNumber()
+
+again = str(input("Do you want to play again (type yes or no): "))
+if again == "yes":
+    guessNumber()
+else:
+    sys.exit(0)
