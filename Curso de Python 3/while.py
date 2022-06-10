@@ -1,4 +1,4 @@
-while True:
+""" while True:
     num1 = input("Digite um numero: ")
     num2 = input("Digite outro numero: ")
 
@@ -10,3 +10,12 @@ while True:
         print(f"A soma de {num1} + {num2} = {soma}")
         break
 print("Boa noite")
+ """
+
+var = str(input("Digite algo: "))
+quantidade = len(var)
+contador = 0
+
+while quantidade != contador:
+    print(var[contador], contador)
+    contador += 1
