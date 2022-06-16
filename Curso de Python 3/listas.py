@@ -34,7 +34,7 @@ while True:
   
   letraSecreta = ""
   for letra in palavra:
-    if letra in digitadas:
+    if letra in digitadas: 
       letraSecreta = letraSecreta + letra
     else: 
       letraSecreta = letraSecreta + "_"
