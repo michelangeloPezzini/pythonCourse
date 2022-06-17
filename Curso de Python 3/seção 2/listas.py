@@ -12,7 +12,7 @@ print(listaDois)
 for item in listaDois:
   print(item) """
 
-import random
+""" import random
 palavras = ["CORRER", "GATO", "IGREJA", "NADADOR", "ESCRITURAS"] 
 palavra = random.choice(palavras)
 digitadas = []
@@ -48,5 +48,10 @@ while True:
     break
   else:
     print(letraSecreta)
-
+ """
     
+# Desempacotamento de listas
+
+lista = ["Mike", "Gabi", "Zelda", 1, 2, 3, 4, 5]
+n1, n2, n3, *lista2, ultimo_valor = lista
+print(n1, n2, n3, ultimo_valor)
