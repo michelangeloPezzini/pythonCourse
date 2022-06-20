@@ -1,94 +1,55 @@
-""" Para este projeto, o usuário receberá um menu e terá a capacidade de escolher itens do menu. As opções do menu incluem o seguinte: """
+cart_itens = []
+cart_itens_price = []
 
-""" Adicionar um novo item
+def add_itens():
+    item_name = str(input("What item would you like to add? ")).capitalize()
+    item_price = input(f"What is the price of {item_name}? ")
+    cart_itens.append(item_name)
+    cart_itens_price.append(item_price)
+    #print(*cart_itens, sep = "\n")
+    print(f"\033[31;45m{item_name} has been added to the cart. \033[m")
+    print()
 
-Exibir o conteúdo do carrinho de compras
+def cart_view():
+    cont = 0
+    for name, price in zip(cart_itens, cart_itens_price):
+        cont = cont + 1
+        print(f"{cont}| Product: {name} | ${price}")
+    #print(f"{cont}: ", *cart_itens, sep="")
 
-Remover um item (necessário apenas para a entrega final do projeto)
+def remove_itens():
+    delete_itens = int(input("What item would you like to remove? "))
+    del(cart_itens[delete_itens - 1])
+    print("Item removed successfully! ")
+    print()
 
-Calcular o total (necessário apenas para a entrega final do projeto) """
-
-""" Desistir """
-
-""" Quando o usuário escolhe uma dessas opções, o programa deve executar a ação apropriada. Em seguida, o programa deve mostrar-lhes o menu novamente e permitir que escolham outra opção. Ele deve continuar em execução até que o usuário escolha a opção de sair. """
-
-
-# Write a program to convert from Fahrenheit to Celsius. Display the result to one decimal place of precision.
-
-# Celsius to Kelvin
-def celsius_to_kelvin():
-    C = float(input('Type a value in °C(celsius) to convert to K(Kelvin): '))
-    K = (C + 273.15)
-    print("\nCelsius to Kelvin = {:.1f}K".format(K))
-
-# Celsius to Fahrenheit
-
-
-def celsius_to_fahrenheit():
-    C = float(input('Type a value in °C(Celsius) to convert to °F(Fahrenheit): '))
-    F = (C * 1.8 + 32)
-    print("\nCelsius to Fahrenheit = {:.1f}°F".format(F))
-
-# Kelvin to Celsius
-
-
-def kelvin_to_celsius():
-    K = float(input('Type a value in K(Kelvin) to be converted to °C(Celsius): '))
-    C = (K - 273.15)
-    print("\nKelvin to Celsius = {:.1f}°C".format(C))
-
-# Kelvin to Fahrenheit
-
-
-def kelvin_to_fahrenheit():
-    K = float(input('Type a value in K(Kelvin) to convert to °F(Fahrenheit): '))
-    F = (K * 1.8 - 459.7)
-    print("\nKelvin to Fahrenheit = {:.1f}°F".format(F))
-
-# Fahrenheit to Celsius
-
-
-def fahrenheit_to_celsius():
-    F = float(input('Type a value in °F(Fahrenheit) to convert to °C(celsius): '))
-    C = ((F - 32) / 1.8)
-    print("\nFahrenheit to Celsius = {:.1f}°C".format(C))
-
-# Fahrenheit to Kelvin
-
-
-def fahrenheit_to_kelvin():
-    F = float(input('Type a value in °F(Fahrenheit) to convert to K(Kelvin): '))
-    K = ((F - 32) / 1.8 + 273)
-    print("\nFahrenheit to Kelvin = {:.1f}K".format(K))
-
+def compute_total():
+    result = sum(map(float, cart_itens_price))
+    print(
+        f"The total price of the items in the shopping cart is \033[31;45m${result}\033[m")
 
 choose = True
 while choose:
-    choose = int(input('''
-    Menu:
-    1 - Celsius to Kelvin
-    2 - Celsius to Fahrenheit
-    3 - Kelvin to Celsius
-    4 - Kelvin to Fahrenheit
-    5 - Fahrenheit to Celsius
-    6 - Fahrenheit to Kelvin
-    7 - EXIT
-
-Choose: '''))
+    print('''
+    Please select one of the following:
+    \033[31;46m1. Add item \033[m
+    \033[32;45m2. View cart \033[m
+    \033[33;44m3. Remove item \033[m
+    \033[34;43m4. Compute total \033[m
+    \033[35;42m5. Quit \033[m
+    ''')
+    choose = int(input("Please enter an action: "))
+    print()
     if choose == 1:
-        celsius_to_kelvin()
+        add_itens()
     elif choose == 2:
-        celsius_to_fahrenheit()
+        cart_view()
     elif choose == 3:
-        kelvin_to_celsius()
+        remove_itens()
     elif choose == 4:
-        kelvin_to_fahrenheit()
+        compute_total()
     elif choose == 5:
-        fahrenheit_to_celsius()
-    elif choose == 6:
-        fahrenheit_to_kelvin()
-    elif choose == 7:
-        print("Goodbye")
+        print("Thank you for shopping with us. Goodbye! ")
         break
     else:
         print('\n Choice not valid.\n Try again.')
