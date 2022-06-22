@@ -1,5 +1,2 @@
-x = 5
-
-x += 1
-
-print(x)
+user = input("Type: ")
+print(type(user))

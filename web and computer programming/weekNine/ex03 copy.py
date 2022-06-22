@@ -7,7 +7,7 @@ def add_itens():
     item_price = input(f"What is the price of {item_name}? ")
     cart_itens.append(item_name)
     cart_itens_price.append(item_price)
-    # print(*cart_itens, sep = "\n")
+    #print(*cart_itens, sep = "\n")
     print(f"\033[35;42m '{item_name}' has been added to the cart. \033[m")
     print()
 
@@ -17,13 +17,14 @@ def cart_view():
     for name, price in zip(cart_itens, cart_itens_price):
         cont = cont + 1
         print(f"{cont}| Product: {name} | ${price}")
-    # print(f"{cont}: ", *cart_itens, sep="")
+    #print(f"{cont}: ", *cart_itens, sep="")
 
 
 def remove_itens():
     cart_view()
     print()
-    delete_itens = int(input("What item would you like to remove? "))
+    delete_itens = int(
+        input("What is the number of the item that you would like to remove? "))
     del(cart_itens[delete_itens - 1])
     print("\033[35;42mItem removed successfully!\033[m ")
     print()
@@ -58,21 +59,26 @@ while choose:
     \033[35;42m5. Compute total \033[m
     \033[36;41m6. Quit \033[m
     ''')
-    choose = int(input("Please type a number: "))
-
-    print()
-    if choose == 1:
-        add_itens()
-    elif choose == 2:
-        cart_view()
-    elif choose == 3:
-        remove_itens()
-    elif choose == 4:
-        change_itens()
-    elif choose == 5:
-        compute_total()
-    elif choose == 6:
-        print("Thank you for shopping with us. Goodbye! ")
-        break
+    list_numbers = ["1", "2", "3", "4", "5", "6"]
+    number = input("Please type a number: ")
+    if number in list_numbers:
+        print("Está")
+        choose = int(number)
+        print()
+        if choose == 1:
+            add_itens()
+        elif choose == 2:
+            cart_view()
+        elif choose == 3:
+            remove_itens()
+        elif choose == 4:
+            change_itens()
+        elif choose == 5:
+            compute_total()
+        elif choose == 6:
+            print()
+            print("Thank you for shopping with us. Goodbye! ")
+            break
     else:
-        print('\n Choice not valid.\n Try again.')
+        print()
+        print("\033[36;41mType again! \033[m")
