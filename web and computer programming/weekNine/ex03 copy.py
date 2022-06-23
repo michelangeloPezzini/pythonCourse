@@ -44,9 +44,8 @@ def change_itens():
 
 def compute_total():
     result = sum(map(float, cart_itens_price))
-    print(
-        f"The total price of the items in the shopping cart is \033[31;45m${result}\033[m")
-
+    print(f"The total price of the items in the shopping cart is \033[31;45m${result}\033[m")
+        
 
 choose = True
 while choose:
@@ -62,7 +61,6 @@ while choose:
     list_numbers = ["1", "2", "3", "4", "5", "6"]
     number = input("Please type a number: ")
     if number in list_numbers:
-        print("Está")
         choose = int(number)
         print()
         if choose == 1:
