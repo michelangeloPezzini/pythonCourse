@@ -1,3 +1,5 @@
+#Michelangelo Pezzini
+#Projeto de python
 cart_itens = []
 cart_itens_price = []
 
@@ -16,7 +18,7 @@ def cart_view():
     cont = 0
     for name, price in zip(cart_itens, cart_itens_price):
         cont = cont + 1
-        print(f"{cont}| Product: {name} | ${price}")
+        print(f"{cont}| Product: {name} | ${price}")                                                                                                                                                                          
     #print(f"{cont}: ", *cart_itens, sep="")
 
 
@@ -26,6 +28,7 @@ def remove_itens():
     delete_itens = int(
         input("What is the number of the item that you would like to remove? "))
     del(cart_itens[delete_itens - 1])
+    del(cart_itens_price[delete_itens -1])
     print("\033[35;42mItem removed successfully!\033[m ")
     print()
 
