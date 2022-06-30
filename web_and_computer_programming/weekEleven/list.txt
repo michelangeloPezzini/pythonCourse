@@ -1,0 +1,4 @@
+Python 100 5/10
+javascript 70 4/10
+html 30 Yes 6/10
+css 30 Yes 6/10
