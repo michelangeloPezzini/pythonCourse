@@ -1,5 +1,5 @@
-names = "mike gabi dudu denner"
-names_separated = names.split()
+line = "     text"
 
-for name in names_separated:
-  print(name)
+line.strip()
+
+print(line)
