@@ -60,3 +60,12 @@ print("A ultima letra 'A' apareceu na posição {}".format(nome.rfind('A')+1)) "
 nomeSeparado = nomeCompleto.split()
 print("Primeiro nome {}".format(nomeSeparado[0]))
 print("Ultimo nome {}".format(nomeSeparado[len(nomeSeparado)-1])) """
+
+#Exercicio 22
+nome = str(input("Digite seu nome: ")).strip()
+print(nome)
+quantidade = len(nome)
+print(quantidade)
+primeiro_nome = nome.split()
+quantidade_primeiro_nome = len(primeiro_nome[0])
+print(quantidade_primeiro_nome)
